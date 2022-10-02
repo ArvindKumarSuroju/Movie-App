@@ -1,18 +1,15 @@
 import React from "react";
-import { Text, View } from "react-native";
-
+import { Box, Center } from "native-base";
+import TVDropdown from "../containers/TVDropdown";
 
 const TVShows = () => {
-return (
-	<View style={{ flex: 1,
-				alignItems: "center",
-				justifyContent: "center" }}>
-	<Text style={{ color: "#006600", fontSize: 40 }}>
-		TVShows Screen!
-	</Text>
-	
-	</View>
-);
+  return (
+    <Box>
+      <Center>
+        <TVDropdown />
+      </Center>
+    </Box>
+  );
 };
 
 export default TVShows;

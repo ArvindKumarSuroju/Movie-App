@@ -1,12 +1,12 @@
-import { Select, Box, CheckIcon, Center } from "native-base";
+import { Box, Center, CheckIcon, Select } from "native-base";
 import React, { useEffect, useState } from "react";
-import { getMovies } from "../services/api";
+import { getTvShows } from "../services/api";
 
-const MoviesDropDown = () => {
+const TVDropdown = () => {
   const [service, setService] = useState("popular");
 
   useEffect(() => {
-    getMovies(service);
+    getTvShows(service);
     console.log(service);
   }, [service]);
 
@@ -24,14 +24,14 @@ const MoviesDropDown = () => {
           mb={5}
           onValueChange={(itemValue) => setService(itemValue)}
         >
-          <Select.Item label="now playing" value="now_playing" />
+          <Select.Item label="airing today" value="airing_today" />
+          <Select.Item label="on the air" value="on_the_air" />
           <Select.Item label="popular" value="popular" />
-          <Select.Item label="top rated" value="top_rated" />
-          <Select.Item label="upcoming" value="upcoming" />
+          <Select.Item label="top_rated" value="top_rated" />
         </Select>
       </Box>
     </Center>
   );
 };
 
-export default MoviesDropDown;
+export default TVDropdown;
