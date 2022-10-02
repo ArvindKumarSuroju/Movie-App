@@ -1,0 +1,11 @@
+{
+  "dependencies": {
+    "@react-navigation/material-top-tabs": "^6.2.4",
+    "react-native-pager-view": "^6.0.0",
+    "react-native-paper": "^4.12.4",
+    "react-native-tab-view": "^3.2.1",
+    "react-native-vector-icons": "^9.2.0",
+    "react-navigation": "^4.4.4",
+    "react-navigation-tabs": "^2.11.2"
+  }
+}
