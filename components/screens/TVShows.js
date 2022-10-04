@@ -1,18 +1,35 @@
-import React from "react";
-import { Text, View } from "react-native";
+import React, { useState, useEffect } from "react";
+import { Box, Center, ScrollView, Text } from "native-base";
+import TVDropdown from "../containers/TVDropdown";
+import TVList from "../list/TVList";
+import { getTvShows } from "../services/api";
 
+const TVShows = ({ navigation }) => {
+  const [service, setService] = useState("popular");
+  const [tvList, setTvList] = useState("");
 
-const TVShows = () => {
-return (
-	<View style={{ flex: 1,
-				alignItems: "center",
-				justifyContent: "center" }}>
-	<Text style={{ color: "#006600", fontSize: 40 }}>
-		TVShows Screen!
-	</Text>
-	
-	</View>
-);
+  const allTvShows = async () => {
+    const tvShows = await getTvShows(service);
+    //console.log(tvShows[0]);
+    setTvList(tvShows.results);
+  };
+
+  useEffect(() => {
+    allTvShows();
+  }, [service]);
+
+  // console.log(tvList);
+
+  return (
+    <Box flex="1">
+      <Center>
+        <TVDropdown service={service} setService={setService} />
+      </Center>
+      <Box flex={1}>
+        <TVList tvList={tvList} navigation={navigation} />
+      </Box>
+    </Box>
+  );
 };
 
 export default TVShows;
