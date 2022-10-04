@@ -7,7 +7,7 @@ const TVDropdown = () => {
 
   useEffect(() => {
     getTvShows(service);
-    console.log(service);
+    // console.log(service);
   }, [service]);
 
   return (
