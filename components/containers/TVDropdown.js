@@ -1,5 +1,5 @@
 import { Box, Center, CheckIcon, Select } from "native-base";
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { getTvShows } from "../services/api";
 
 const TVDropdown = (props) => {

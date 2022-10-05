@@ -1,21 +1,9 @@
-import {
-  Box,
-  Center,
-  HStack,
-  StatusBar,
-  Text,
-  FlatList,
-  Image,
-  VStack,
-  Button,
-} from "native-base";
+import { FlatList } from "native-base";
 import { IMAGE_URL } from "../services/api_config";
 import Card from "../listitems/Card";
 
 const TVList = (props) => {
-  // console.log(`${IMAGE_URL}${props.tvList[0].poster_path}`);
   return (
-    // <Text>Hello</Text>
     <FlatList
       data={props.tvList}
       renderItem={({ item }) => (
