@@ -1,26 +1,19 @@
-import React from "react";
+import { AntDesign, MaterialIcons } from "@expo/vector-icons";
 import {
-  VStack,
-  Input,
-  Button,
-  IconButton,
-  Icon,
-  Text,
-  NativeBaseProvider,
-  Center,
   Box,
-  Divider,
-  Heading,
-  FormControl,
-  Stack,
-  WarningOutlineIcon,
-  Select,
+  Button,
+  Center,
   CheckIcon,
+  FormControl,
   HStack,
+  Icon,
+  IconButton,
+  Input,
+  Select,
+  Stack,
+  VStack,
 } from "native-base";
-import { Ionicons, MaterialIcons } from "@expo/vector-icons";
-import { FontAwesome5 } from "@expo/vector-icons";
-import { AntDesign } from "@expo/vector-icons";
+import React from "react";
 
 const SearchFilter = (props) => {
   return (

@@ -19,10 +19,8 @@ export const getMovies = async (MovieSelection) => {
 export const getTvShows = async (TVSelection) => {
   const url = `${BASE_URL}/tv/${TVSelection}/?api_key=${API_KEY}&language=en-US&page=1`;
 
-  //console.log(url);
   try {
     const response = await axios.get(url);
-    //console.log(response.data);
     return response.data;
   } catch (error) {
     console.log(error);
@@ -32,10 +30,8 @@ export const getTvShows = async (TVSelection) => {
 export const getSearch = async (searchField, searchType) => {
   const url = `${BASE_URL}/search/${searchType}?api_key=${API_KEY}&language=en-US&query=${searchField}&page=1&include_adult=false`;
 
-  // console.log(url);
   try {
     const response = await axios.get(url);
-    //console.log(response.data);
     return response.data;
   } catch (error) {
     console.log(error);

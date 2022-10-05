@@ -2,21 +2,11 @@ import { BASE_URL } from "../services/api_config";
 import { useEffect, useState } from "react";
 import { API_KEY } from "../services/api_config";
 import axios from "axios";
-import {
-  Box,
-  Center,
-  HStack,
-  StatusBar,
-  Text,
-  FlatList,
-  Image,
-  VStack,
-  Button,
-} from "native-base";
+import { Box, Center, HStack, Text, Image, VStack } from "native-base";
 import { IMAGE_URL } from "../services/api_config";
 import Loading from "../layout/Loading";
 
-const Details = (props, route) => {
+const Details = (props) => {
   const { id, type } = props.route.params;
   const [info, setInfo] = useState("");
   const [isLoading, setIsLoading] = useState(false);
@@ -24,11 +14,8 @@ const Details = (props, route) => {
   const getDetails = async () => {
     const url = `${BASE_URL}/${type}/${id}?api_key=${API_KEY}&language=en-US&page=1`;
 
-    // console.log(url);
     try {
       const response = await axios.get(url).catch(console.log);
-      // console.log(response.data);
-      // return response.data;
       setInfo(response.data);
       setIsLoading(true);
     } catch (error) {

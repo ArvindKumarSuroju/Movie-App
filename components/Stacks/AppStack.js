@@ -4,7 +4,6 @@ import SearchResults from "../screens/SearchResults";
 import TVShows from "../screens/TVShows";
 import Details from "../screens/Details";
 import { createMaterialTopTabNavigator } from "@react-navigation/material-top-tabs";
-
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 

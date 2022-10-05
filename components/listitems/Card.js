@@ -1,14 +1,4 @@
-import {
-  Box,
-  Center,
-  HStack,
-  StatusBar,
-  Text,
-  FlatList,
-  Image,
-  VStack,
-  Button,
-} from "native-base";
+import { Box, HStack, Text, Image, VStack, Button } from "native-base";
 
 const Card = (props) => {
   const {
@@ -21,8 +11,8 @@ const Card = (props) => {
     type,
   } = props;
 
-  //console.log(navigation.navigate);
-  //console.log(poster_path);
+  // console.log(original_title);
+  // console.log(poster_path);
 
   return (
     <>

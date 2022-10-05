@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { View } from "react-native";
-import { Box, Center, ScrollView, Text } from "native-base";
+import { Box, Center } from "native-base";
 import MoviesDropDown from "../containers/MoviesDropdown";
 import MovieList from "../list/MovieList";
 import { getMovies } from "../services/api";
@@ -11,12 +10,8 @@ const Movies = ({ navigation }) => {
 
   const allMovies = async () => {
     const movies = await getMovies(service);
-    // console.log(movies[0]);
     setMovieList(movies.results);
   };
-
-  // console.log(movieList);
-  // console.log(props.navigation);
 
   useEffect(() => {
     allMovies();
