@@ -18,7 +18,7 @@ const TVShows = ({ navigation }) => {
     allTvShows();
   }, [service]);
 
-  // console.log(tvList);
+  // console.log(service);
 
   return (
     <Box flex="1">

@@ -22,22 +22,18 @@ const Card = (props) => {
   } = props;
 
   //console.log(navigation.navigate);
-  // console.log(poster_path);
+  //console.log(poster_path);
 
   return (
     <>
       <Box ml={4} mr={4} mb={4}>
         <HStack space={2} alignItems="center">
-          {poster_path != null ? (
-            <Image
-              source={{ uri: poster_path }}
-              alt="Movie_Poster"
-              size="xl"
-              width="30%"
-            />
-          ) : (
-            <Text>No Poster</Text>
-          )}
+          <Image
+            source={{ uri: poster_path }}
+            alt="Movie_Poster"
+            size="xl"
+            width="30%"
+          />
 
           <VStack space={2} px={3} width="70%">
             <Box>
